@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="text/javascript">
+		var json = {a: 10, b: 22, c: 33};
+		if (window.JSON && typeof window.JSON.stringify === 'function'){
+			alert(JSON.stringify(json));
+		} 
+		else {
+			var jsonWithCrutch = [], i = 0, key;
+			for (key in json) {
+  				jsonWithCrutch[i] = key + ':' + json[key];
+  				i++;
+			}
+			alert(jsonWithCrutch);
+		}
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>
